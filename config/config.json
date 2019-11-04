@@ -39,9 +39,28 @@
 			"tlsSettings": {
 				"serverName": "",
 				"allowInsecure": true,
-				"certificates": [{
-					"certificate": ["-----BEGIN CERTIFICATE REQUEST-----", "MIIBITCBxwIBADBlMQswCQYDVQQGEwJDTjEQMA4GA1UECBMHQmVpamluZzEQMA4G", "A1UEBxMHQmVpamluZzENMAsGA1UEChMEWkdZWjEQMA4GA1UECxMHSVQgRGVwdDER", "MA8GA1UEAxMIemd5ei54eXowWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATjC6OS", "qXP1clud6QTX/nbdaKSi+DuUHdSq4G+4GXnKd4DRCZRtdMdE8cNGUTVY4qNRRhk3", "6jWnwRFYm0mNO+09oAAwCgYIKoZIzj0EAwIDSQAwRgIhANOaBu5ywaXD2GCS+0dZ", "7KNskxKb1EY7HuljxrFcqY6IAiEAhDRD2zNeML2C3SLEDuDmq/M7+GIM2M/qvoeK", "OCy/Knk=", "-----END CERTIFICATE REQUEST-----", ""],
-					"key": ["-----BEGIN EC PRIVATE KEY-----", "MHcCAQEEIC4n1vmQp0ITNHU0VdFYSL+vS7VBxsyAFLIVSRy5pN0soAoGCCqGSM49", "AwEHoUQDQgAE4wujkqlz9XJbnekE1/523Wikovg7lB3UquBvuBl5yneA0QmUbXTH", "RPHDRlE1WOKjUUYZN+o1p8ERWJtJjTvtPQ==", "-----END EC PRIVATE KEY-----", ""]
+				 "certificates": [{
+				 "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIBxTCCAW2gAwIBAgIUA9ievvx1eVSZ1vM9JOy9ifzLrXkwCQYHKoZIzj0EATA1",
+            "MRIwEAYDVQQDDAlDTE9VRENPTkUxEjAQBgNVBAoMCUNMT1VEQ09ORTELMAkGA1UE",
+            "BhMCVVMwHhcNMTkxMTA0MjIyMTIyWhcNMjAwNjA0MDAwMDAwWjB0MQswCQYDVQQG",
+            "EwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEUMBIGA1UEBwwLTG9zIEFuZ2VsZXMx",
+            "EjAQBgNVBAoMCUNMT1VEQ09ORTESMBAGA1UECwwJQ0xPVURDT05FMRIwEAYDVQQD",
+            "DAlDTE9VRENPTkUwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQYwkYHN005s6mE",
+            "f6d3y03/vp/TLMEmSmOA82g5fJAcKRTWgLXyVUY93nFE4PTfKK1jLQadrjXSGBSA",
+            "rtFN30hCox0wGzALBgNVHREEBDACggAwDAYDVR0TAQH/BAIwADAJBgcqhkjOPQQB",
+            "A0cAMEQCIBwMofIiTN4Snep4ySXw7wp56yGQT9idx37KSGASWca3AiBdoBZY4lIq",
+            "EkJcISEpRBEkFbfWZ+kLTZtmvDeORU/IqA==",
+            "-----END CERTIFICATE-----"
+          ],
+          "key": [
+            "-----BEGIN PRIVATE KEY-----",
+            "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgl1KvzgiIRc0/Mxco",
+            "2J7hA4YgzwZrDCPu9i7j4BWC2RuhRANCAAQYwkYHN005s6mEf6d3y03/vp/TLMEm",
+            "SmOA82g5fJAcKRTWgLXyVUY93nFE4PTfKK1jLQadrjXSGBSArtFN30hC",
+            "-----END PRIVATE KEY-----"
+          ]
 				}]
 			},
 			"httpSettings": {
