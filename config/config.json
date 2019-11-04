@@ -1,0 +1,306 @@
+{
+
+	"inbounds": [{
+
+      "port": 60666,
+
+      "listen": "0.0.0.0",
+
+      "protocol": "vmess",
+
+      "settings": {
+
+        "clients": [
+
+          {
+
+            "id": "7995eca3-eb30-45b3-b396-23139d62b71e",
+
+            "alterId": 16
+
+          }
+
+        ]
+
+      },
+
+      "streamSettings": {
+
+        "network": "kcp",
+
+        "kcpSettings": {
+
+          "mtu": 1300,
+
+          "tti": 20,
+
+          "uplinkCapacity": 150,
+
+          "downlinkCapacity": 200,
+
+          "congestion": false,
+
+          "readBufferSize": 2,
+
+          "writeBufferSize": 2,
+
+          "header": {
+
+            "type": "dtls"
+
+          }
+
+        }
+
+      }
+
+}, {
+
+      "port": 443,
+
+      "protocol": "vmess",
+
+      "settings": {
+
+        "clients": [
+
+          {
+
+            "id": "7995eca3-eb30-45b3-b396-23139d62b71e",
+
+            "alterId": 16
+
+          }
+
+        ]
+
+      },
+
+      "streamSettings": {
+
+        "network": "http",
+
+        "security": "tls",
+
+        "tlsSettings": {
+
+          "serverName": "",
+
+          "allowInsecure": true,
+
+          "certificates": [
+
+            {
+
+              "certificate": [
+            "-----BEGIN CERTIFICATE REQUEST-----",
+            "MIIBITCBxwIBADBlMQswCQYDVQQGEwJDTjEQMA4GA1UECBMHQmVpamluZzEQMA4G",
+            "A1UEBxMHQmVpamluZzENMAsGA1UEChMEWkdZWjEQMA4GA1UECxMHSVQgRGVwdDER",
+            "MA8GA1UEAxMIemd5ei54eXowWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATjC6OS",
+            "qXP1clud6QTX/nbdaKSi+DuUHdSq4G+4GXnKd4DRCZRtdMdE8cNGUTVY4qNRRhk3",
+            "6jWnwRFYm0mNO+09oAAwCgYIKoZIzj0EAwIDSQAwRgIhANOaBu5ywaXD2GCS+0dZ",
+            "7KNskxKb1EY7HuljxrFcqY6IAiEAhDRD2zNeML2C3SLEDuDmq/M7+GIM2M/qvoeK",
+            "OCy/Knk=",
+            "-----END CERTIFICATE REQUEST-----",
+            ""
+          ],
+          "key": [
+            "-----BEGIN EC PRIVATE KEY-----",
+            "MHcCAQEEIC4n1vmQp0ITNHU0VdFYSL+vS7VBxsyAFLIVSRy5pN0soAoGCCqGSM49",
+            "AwEHoUQDQgAE4wujkqlz9XJbnekE1/523Wikovg7lB3UquBvuBl5yneA0QmUbXTH",
+            "RPHDRlE1WOKjUUYZN+o1p8ERWJtJjTvtPQ==",
+            "-----END EC PRIVATE KEY-----",
+            ""
+          ]
+            }
+
+          ]
+
+        },
+
+        "httpSettings": {
+
+          "path": "/",
+
+          "host": []
+
+        }
+
+      },
+
+      "tag": "",
+
+      "sniffing": {
+
+        "enabled": true,
+
+        "destOverride": [
+
+          "http",
+
+          "tls"
+
+        ]
+
+      }
+
+    },
+
+{
+
+			"port": 80,
+
+			"protocol": "vmess",
+
+			"settings": {
+
+				"clients": [{
+
+					"id": "7995eca3-eb30-45b3-b396-23139d62b71e",
+
+					"level": 1,
+
+					"alterId": 16
+
+				}]
+
+			},
+
+			"streamSettings": {
+
+				"network": "tcp",
+
+				"tcpSettings": {
+
+					"connectionReuse": true,
+
+					"header": {
+
+						"type": "http",
+
+						"request": {
+
+							"version": "1.1"
+
+						},
+
+						"response": {
+
+							"version": "1.1",
+
+							"status": "200",
+
+							"reason": "OK",
+
+							"headers": {
+
+								"Content-Type": ["application/octet-stream", "application/x-msdownload", "text/html", "application/x-shockwave-flash"],
+
+								"Transfer-Encoding": ["chunked"],
+
+								"Connection": ["keep-alive"],
+
+								"Pragma": "no-cache"
+
+							}
+
+						}
+
+					}
+
+				}
+
+			},
+
+			"sniffing": {
+
+				"enabled": true,
+
+				"destOverride": ["http", "tls"]
+
+			}
+
+		},
+
+		{
+
+			"protocol": "shadowsocks",
+
+			"port": 40000,
+
+			"settings": {
+
+				"method": "aes-256-gcm",
+
+				"password": "han098poi",
+
+				"network": "tcp,udp",
+
+				"level": 1,
+
+				"ota": false
+
+			}
+
+		}
+
+	],
+
+	"outbounds": [{
+
+			"protocol": "freedom",
+
+			"settings": {}
+
+		},
+
+		{
+
+			"protocol": "blackhole",
+
+			"settings": {},
+
+			"tag": "blocked"
+
+		},
+
+		{
+
+			"protocol": "freedom",
+
+			"settings": {},
+
+			"tag": "direct"
+
+		},
+
+		{
+
+			"protocol": "mtproto",
+
+			"settings": {},
+
+			"tag": "tg-out"
+
+		}
+
+	],
+
+	"dns": {
+
+		"server": [
+
+			"1.1.1.1",
+
+			"1.0.0.1",
+
+			"8.8.8.8",
+
+			"8.8.4.4"
+
+		]
+
+	}
+
+}
+
