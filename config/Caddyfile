@@ -1,0 +1,6 @@
+http://cc.zgyz.xyz:81 {
+gzip
+log ../access.log
+root /share
+browse
+}
